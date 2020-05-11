@@ -5,11 +5,9 @@ container.setAttribute('class', 'row');
 app.appendChild(container);
 
 var request = new XMLHttpRequest();
-//request.open('GET', 'https://ghibliapi.herokuapp.com/films', true);
 request.open('GET', 'https://api.sheety.co/30b6e400-9023-4a15-8e6c-16aa4e3b1e72', true);
 request.onload = function () {
 
-  // Begin accessing JSON data here
   var data = JSON.parse(this.response);
   if (request.status >= 200 && request.status < 400) {
     data.forEach(locacao => {
@@ -24,7 +22,7 @@ request.onload = function () {
         const p = document.createElement('p');
         locacao.name = locacao.name.substring(0, 300);
         p.textContent = `${locacao.name}`;
-        
+
         const p2 = document.createElement('p');
         p2.textContent = `R$: ${locacao.price}`;
 
