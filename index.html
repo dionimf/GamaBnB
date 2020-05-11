@@ -1,11 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>GamaBnB</title>
 </head>
 <body>
     
+    <div class="container">
+        
+            <div class="col-md-12">
+                
+                    <div>
+                        <nav class="navbar navbar-dark bg-dark">
+                            <a class="navbar-brand" href="#">GamaBnB</a>
+                        </nav>
+                    </div>
+                
+                <div class="row">
+                   
+                    <div class="col-md-4">
+                        <div class="filtro">
+                            <input type="text" class="form-control" placeholder="Nome da acomodação">
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="filtro">
+                            
+                            <select class="form-control form-control-lg" id="filtroOrdenacao" onchange="filtrar(this)">
+                                <option selected>Ordenar por</option>
+                                <option value="nome" label="Nome do Quarto"></option>
+                                <option value="menorpreco" label="Menor Preço"></option>
+                                <option value="maiorpreco" label="Maior Preço"></option>
+                                <option value="tipocomodacao" label="Tipo Acomodação"></option>
+                               
+                            </select>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div class="col-md-4">
+                        <div class="filtro">
+                            
+                            <select class="form-control form-control-lg" id="filtroTipoAcomodacao" onchange="filtrar(this)">
+                                <option selected>Tipo Acomodação</option>
+                                <option value="Apartamento" label="Apartamento"></option>
+                                <option value="Casa" label="Casa"></option>
+                                <option value="Chácara" label="Chácara"></option>
+                                <option value="Estúdio" label="Estúdio"></option>
+                                <option value="Loft" label="Loft"></option>
+                                <option value="Quarto" label="Quarto"></option>
+                                <option value="Sítio" label="Sítio"></option>
+                            </select>
+                            
+                        </div>
+                        
+                    </div>
+
+                </div>
+                <div id="root"></div>
+                
+                    
+                </div>
+                
+            </div>
+            <div class="footer">
+                <p>
+                    Desenvolvido por <b>Dioni Machado Ferreira</b> - Desafio COVID-19 - Gama Academy
+                </p>
+            </div>
+    </div>
+
+    <script src="./scripts.js"></script>
+    <script src="./filtros.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
