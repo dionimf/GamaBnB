@@ -1,5 +1,6 @@
 .card{
     margin-top: 20px;
+    margin-right: 20px;
 }
 .filtro{
     margin-top: 20px;
@@ -7,4 +8,7 @@
 .footer{
     margin-top: 30px;
     text-align: center;
+}
+img{
+    max-width: 100%;
 }

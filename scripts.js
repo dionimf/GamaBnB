@@ -13,19 +13,25 @@ request.onload = function () {
   var data = JSON.parse(this.response);
   if (request.status >= 200 && request.status < 400) {
     data.forEach(locacao => {
-      const card = document.createElement('div');
-      card.setAttribute('class', 'card col-md-4');
+        const card = document.createElement('div');
+        card.setAttribute('class', 'card col-md-4');
+        const img = document.createElement('img');
+        img.src=locacao.photo;
 
-      const h1 = document.createElement('h1');
-      h1.textContent = locacao.property_type;
+        const h1 = document.createElement('h5');
+        h1.textContent = locacao.property_type;
 
-      const p = document.createElement('p');
-      locacao.name = locacao.name.substring(0, 300);
-      p.textContent = `${locacao.name}`;
+        const p = document.createElement('p');
+        locacao.name = locacao.name.substring(0, 300);
+        p.textContent = `${locacao.name}`;
+        const h5 = document.createElement('h4');
+        h1.textContent = `R$: ${locacao.price}`;
 
-      container.appendChild(card);
-      card.appendChild(h1);
-      card.appendChild(p);
+        container.appendChild(card);
+        card.appendChild(img);
+        card.appendChild(h1);
+        card.appendChild(p);
+        card.appendChild(h5);
     });
   } else {
     const errorMessage = document.createElement('erro');
