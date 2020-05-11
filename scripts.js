@@ -24,14 +24,15 @@ request.onload = function () {
         const p = document.createElement('p');
         locacao.name = locacao.name.substring(0, 300);
         p.textContent = `${locacao.name}`;
-        const h5 = document.createElement('h4');
-        h1.textContent = `R$: ${locacao.price}`;
+        
+        const p2 = document.createElement('p');
+        p2.textContent = `R$: ${locacao.price}`;
 
         container.appendChild(card);
         card.appendChild(img);
         card.appendChild(h1);
         card.appendChild(p);
-        card.appendChild(h5);
+        card.appendChild(p2);
     });
   } else {
     const errorMessage = document.createElement('erro');
